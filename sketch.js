@@ -11,9 +11,7 @@ function draw() {
   background(220);
   textSize(50);
   checkdata();
-  if(maxY > 0) {
-    background(0,256,0);
-  }
+  text(maxX,100,100)
 }
 
 function checkdata() {
@@ -22,7 +20,7 @@ function checkdata() {
   let accelZ = accelerationZ;
   
   if (accelX > maxX) {
-    maxY = 1;
-    return maxY;
+    maxX = accelX;
+    return maxX;
   }
 }
