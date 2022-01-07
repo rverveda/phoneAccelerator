@@ -10,14 +10,15 @@ function setup() {
 function draw() {
   background(220);
   accels = [accelerationX, accelerationY, accelerationZ];
-  if (accelerationX > maxX) {
+  if (accels[0] > maxX) {
     maxX = accelerationX;
-  } else if (accelerationY > maxY) {
+  } else if (accels[1] > maxY) {
     maxY = accelerationY;
-  } else if (accelerationZ > maxZ) {
+  } else if (accels[2] > maxZ) {
     maxZ = accelerationZ;
   }
   textSize(50);
   text(accels, 100, 50);
   text(maxAccels, 100, 200);
+  // console.log(maxX, maxY, maxZ);
 }
